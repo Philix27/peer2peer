@@ -21,4 +21,8 @@ export class AppImg {
     workers: "/grento/workers.jpg",
     sun: "/grento/sun.jpg",
   }
+
+  static solarPanel = {}
+  static solarBattery = {}
+  static solarInverter = {}
 }

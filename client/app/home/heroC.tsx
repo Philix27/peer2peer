@@ -1,11 +1,13 @@
 "use client"
 
 import React from "react"
+import { useRouter } from "next/navigation"
 import { AppImg } from "@/lib"
 
-import { TextB, TextH } from "@/app/comps"
+import { Button, TextB, TextH } from "@/app/comps"
 
 export default function HeroCenter(props: { title: string; subtitle: string }) {
+  const router = useRouter()
   return (
     <div
       className={`
@@ -17,7 +19,7 @@ export default function HeroCenter(props: { title: string; subtitle: string }) {
     `}
     >
       <img src={AppImg.green.sky} className="w-full h-full" />
-      <div className="bg-gradient-to-r from-teal-900/70 to-green-950/70 absolute w-full h-full"  />
+      <div className="bg-gradient-to-r from-teal-900/70 to-green-950/70 absolute w-full h-full" />
       <div
         className={`absolute top-0
         pt-4 h-full flex flex-col 
@@ -34,6 +36,7 @@ export default function HeroCenter(props: { title: string; subtitle: string }) {
         <div className="w-4/5">
           <TextB v={"p4"}>{props.subtitle}</TextB>
         </div>
+        <Button className="mt-4" onClick={() => router.push("/products")}>Start Shopping</Button>
       </div>
     </div>
   )
