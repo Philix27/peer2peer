@@ -14,12 +14,14 @@ const cardItems = [
   {
     title: "Security",
     img: AppImg.lock,
-    subtitle: "All transactions are tightly secured and processed by Celo Blockchain",
+    subtitle:
+      "All transactions are tightly secured and processed by Celo Blockchain",
   },
   {
     title: "Friends",
     img: AppImg.phone,
-    subtitle: "Easily pay utility bills for friends and family with payment link",
+    subtitle:
+      "Easily pay utility bills for friends and family with payment link",
   },
 ]
 export default function CardsSection() {
@@ -34,21 +36,22 @@ export default function CardsSection() {
       {cardItems.map((item, i) => (
         <div
           className={
-            "border-r-ring md:mx-4 bg-primary rounded-md p-4 mb-5 max-h-[400px]"
+            "border-r-ring md:mx-4 bg-card rounded-md mb-5"
           }
           key={i}
         >
-          <div className="p-2">
-            <div className={"w-full flex items-center justify-center"}>
+          <div className="">
+            <div className={"w-full flex items-center justify-center px-4"}>
               <div className={`h-[300px] w-[250px]`}>
                 <img src={item.img} className={"w-fit h-fit"} />
               </div>
             </div>
-
-            <TextH v="h3" className="mb-4">
-              {item.title}
-            </TextH>
-            <TextB v="p5">{item.subtitle}</TextB>
+            <div className="bg-primary p-4">
+              <TextH v="h3" className="mb-4">
+                {item.title}
+              </TextH>
+              <TextB v="p5">{item.subtitle}</TextB>
+            </div>
           </div>
         </div>
       ))}
