@@ -15,7 +15,7 @@ export function Sidebar(props: { className?: string }) {
     <div
       className={cn(
         `
-        w-[272px] border-l-[2px] bg-primary py-4 hidden md:block
+        w-[272px] border-l-[1px] py-4 hidden md:block
         border-r-2 border-secondary`,
         props.className
       )}
