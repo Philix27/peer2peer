@@ -18,6 +18,8 @@ model User {
   Phone          String
   dob            String
   is_verified    Boolean
+  is_admin    Boolean
+  is_investor    Boolean
   passed_kyc     Boolean
   created_at     DateTime? @default(now())
   updated_at     DateTime? @updatedAt
@@ -27,8 +29,10 @@ model Product {
   id            String    @id @default(uuid())
   name          String
   desc          String
+  image_urls          String[]
   quantity_left Int
   amount        Int
+  is_avaliable Boolean @default(false)
   created_at    DateTime? @default(now())
   updated_at    DateTime? @updatedAt
 }
