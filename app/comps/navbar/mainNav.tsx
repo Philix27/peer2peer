@@ -50,24 +50,9 @@ export function NavbarHeader({ items }: MainNavProps) {
           </nav>
         </div>
 
-        <div className="flex items-center justify-center md:gap-x-3">
-          <div className="mr-4">
+        <div className="flex items-center justify-center">
+          <div className="">
             <ThemeToggle />
-          </div>
-          <div className={"md:hidden"}>
-            {isSidebarOpen ? (
-              <SidebarClose
-                onClick={() => {
-                  setIsSidebarOpen(false)
-                }}
-              />
-            ) : (
-              <MenuIcon
-                onClick={() => {
-                  setIsSidebarOpen(true)
-                }}
-              />
-            )}
           </div>
         </div>
       </div>
