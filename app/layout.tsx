@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <AppProviders>
-          <div className="relative flex min-h-screen flex-col bg-primary">
+          <div className="relative flex min-h-screen flex-col bg-background">
             <div className="flex-1">
               <NavbarHeader />
               {children}

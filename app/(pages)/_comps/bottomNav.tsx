@@ -1,16 +1,14 @@
-"use client"
+"use client";
 
-import React from "react"
-import { usePathname, useRouter } from "next/navigation"
-import { TextB } from "@/comps"
-import { cn } from "@/lib"
-import {
-  Cog,
-  LucideDollarSign,
-  LucideIcon,
-  MessageCircle,
-  UserCog,
-} from "lucide-react"
+import React from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { TextB } from "@/comps";
+import { cn } from "@/lib";
+import { Cog, LucideDollarSign, LucideIcon, MessageCircle, UserCog } from "lucide-react";
+
+
+
+
 
 export function BottomNav() {
   const router = useRouter()
@@ -24,7 +22,7 @@ export function BottomNav() {
   }
 
   return (
-    <div className={"fixed bottom-0 h-[60px] border-t border-cyan-50 w-full"}>
+    <div className={"fixed bottom-0 h-[60px] border-t-[0.5px] border-accent w-full bg-primary"}>
       <div className="flex justify-between items-center w-full px-8 py-2 h-full">
         {navItems.map(({ Icon, title, link }, i) => {
           return (
@@ -34,7 +32,7 @@ export function BottomNav() {
               className={cn(
                 `h-full 
               flex flex-col items-center justify-center 
-              w-full rounded-lg`,
+              w-full rounded-[25px]`,
                 isActive(link) ? "bg-secondary" : "bg-primary"
               )}
             >
@@ -51,11 +49,6 @@ export function BottomNav() {
 }
 const navItems: { title: string; Icon: LucideIcon; link: string }[] = [
   {
-    title: "Friends",
-    link: "/friends",
-    Icon: UserCog,
-  },
-  {
     title: "Chat",
     link: "/chat",
     Icon: MessageCircle,
@@ -64,6 +57,11 @@ const navItems: { title: string; Icon: LucideIcon; link: string }[] = [
     title: "Market",
     link: "/market",
     Icon: LucideDollarSign,
+  },
+  {
+    title: "History",
+    link: "/transactions",
+    Icon: UserCog,
   },
   {
     title: "Settings",
