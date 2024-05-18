@@ -11,12 +11,14 @@ export default function HeroCenter(props: { title: string; subtitle: string }) {
   return (
     <div
       className={`
-        min-h-[calc(90vh - 50px)] w-full h-[100vh]
+        min-h-[90vh] w-full h-[100vh]
         flex items-center justify-center
         bg-cover bg-center relative
-        bg-gradient-to-r from-cyan-600 to-blue-700
+        bg-gradient-to-r from-cyan-500 to-blue-500
+        mb-[20vh]
     `}
     >
+      <img src={AppImg.green.sky} className="w-full h-full" />
       <div className="bg-gradient-to-r from-teal-900/70 to-green-950/70 absolute w-full h-full" />
       <div
         className={`absolute top-0

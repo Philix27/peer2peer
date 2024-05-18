@@ -17,15 +17,15 @@
     --input: 214.3 31.8% 91.4%;
 
     --card: #ffffff;
-    --card-foreground:  #013b09;
+    --card-foreground:  #18232e;
 
-    --primary: #66a403;
+    --primary: #18232e;
     --primary-foreground: #ffffff;
 
-    --secondary: #011938;
+    --secondary: #202f3f;
     --secondary-foreground:  #f8f8f8;
 
-    --accent: #b8f25a;
+    --accent: #d0d3d3;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 100% 50%;
