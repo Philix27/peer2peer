@@ -1,14 +1,16 @@
-"use client";
+"use client"
 
-import React from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { TextB } from "@/comps";
-import { cn } from "@/lib";
-import { Cog, LucideDollarSign, LucideIcon, MessageCircle, UserCog } from "lucide-react";
-
-
-
-
+import React from "react"
+import { usePathname, useRouter } from "next/navigation"
+import { TextB } from "@/comps"
+import { cn } from "@/lib"
+import {
+  Cog,
+  LucideDollarSign,
+  LucideIcon,
+  MessageCircle,
+  UserCog,
+} from "lucide-react"
 
 export function BottomNav() {
   const router = useRouter()
@@ -22,7 +24,11 @@ export function BottomNav() {
   }
 
   return (
-    <div className={"fixed bottom-0 h-[60px] border-t-[0.5px] border-accent w-full bg-primary"}>
+    <div
+      className={
+        "fixed bottom-0 h-[60px] border-t-[0.5px] border-accent w-full bg-primary"
+      }
+    >
       <div className="flex justify-between items-center w-full px-8 py-2 h-full">
         {navItems.map(({ Icon, title, link }, i) => {
           return (
@@ -36,7 +42,7 @@ export function BottomNav() {
                 isActive(link) ? "bg-secondary" : "bg-primary"
               )}
             >
-              <Icon className={"text-primary-foreground"} />
+              <Icon className={"text-primary-foreground mb-2"} size={18} />
               <TextB v="p6" className={"text-primary-foreground"}>
                 {title}
               </TextB>

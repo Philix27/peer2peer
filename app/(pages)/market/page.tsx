@@ -1,5 +1,5 @@
 import React from "react"
 
-export default function OrdersPage() {
+export default function P2PPage() {
   return <div>OrdersPage</div>
 }

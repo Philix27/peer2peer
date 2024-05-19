@@ -18,7 +18,7 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="px-4">
+    <div className="px-2">
       <div className="w-full flex items-center justify-center my-2 ">
         <InputText Icon={SearchIcon} />
       </div>
